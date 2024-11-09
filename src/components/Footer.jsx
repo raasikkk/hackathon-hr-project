@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto flex sm:flex-row flex-col items-start justify-between">
         <img src={Logo} alt="" className="mt-[20px] sm:mx-0 mx-auto" />
         {/* Footer Content */}
-        <div className="footer-content mt-[20px] min-h-[300px] w-[70%] mx-auto gap-5 flex justify-between">
+        <div className="footer-content mt-[20px] min-h-[300px] w-[70%] mx-auto gap-5 flex flex-wrap justify-between">
           <div className="solution ">
             <h3 className="text-corange text-[20px] font-bold">Решения</h3>
             <ul className="text-corange flex flex-col mt-[30px] gap-[20px]">

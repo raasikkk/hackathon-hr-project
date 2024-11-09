@@ -21,7 +21,7 @@ const Another = () => {
           <h2 className="mt-[30px] text-corange text-center text-[40px] font-extrabold ">
             Разместитe <br /> вакансию на HireHub !
           </h2>
-          <p className="text-corange text-center px-[70px] font-semibold">
+          <p className="text-corange hidden sm:block text-center px-[70px] font-semibold">
             Находите сотрудников среди тех, кто действительно хочет работать у
             вас. HireHub — ведущий сервис для поиска специалистов в Казахстане*
           </p>
@@ -37,7 +37,7 @@ const Another = () => {
           <h2 className="mt-[30px] text-corange text-center text-[40px] font-extrabold">
             Какие сотрудники <br /> есть на HireHub?
           </h2>
-          <p className="text-corange text-center px-[50px] font-semibold">
+          <p className="text-corange hidden sm:block text-center px-[50px] font-semibold">
             Не ждите, пока вам ответят — выберите идеального сотрудника из 5 944
             901 резюме от 4 259 919 соискателей.
           </p>
@@ -53,12 +53,14 @@ const Another = () => {
                 backgroundPosition: "10px center",
               }}
             />
-            <button className="bg-corange h-[65px] aspect-square rounded-[11px]">
-              <img className="mx-auto" src={submitIcon} alt="btn" />
-            </button>
-            <button className="bg-corange h-[65px] aspect-square rounded-[11px]">
-              <img className="mx-auto" src={settingIcon} alt="btn" />
-            </button>
+            <div className="buttons flex gap-5">
+              <button className="bg-corange h-[65px] aspect-square rounded-[11px]">
+                <img className="mx-auto" src={submitIcon} alt="btn" />
+              </button>
+              <button className="bg-corange h-[65px] aspect-square rounded-[11px]">
+                <img className="mx-auto" src={settingIcon} alt="btn" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
