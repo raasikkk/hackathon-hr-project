@@ -3,13 +3,15 @@ import cards from "../vacancyInfo";
 
 const VacancyCards = () => {
   return (
-    <div className="container relative mx-auto mt-[150px] ">
+    <div className="container relative mx-auto mt-[50px] md:mt-[150px] ">
       {/* Between Cards */}
       {/* <div className="between-cards absolute">
         <div className="between-card bg-corange w-[300px] h-[150px]">Hello</div>
       </div> */}
 
-      <h2 className="text-corange  text-[40px] font-extrabold">Вакансии</h2>
+      <h2 className="text-corange text-center md:text-start text-[40px] font-extrabold">
+        Вакансии
+      </h2>
       <div className="vcards grid justify-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[15px]">
         {cards.map((item) => {
           return (

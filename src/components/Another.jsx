@@ -26,7 +26,7 @@ const Another = () => {
             вас. HireHub — ведущий сервис для поиска специалистов в Казахстане*
           </p>
 
-          <button className="absolute bottom-3 left-[10%] px-[60px] py-[30px] bg-corange text-[30px] font-extrabold rounded-[11px]">
+          <button className="absolute bottom-3 left-[7%] px-[60px] py-[30px] bg-corange text-[30px] font-extrabold rounded-[11px]">
             Разместить Вакансию
           </button>
         </div>

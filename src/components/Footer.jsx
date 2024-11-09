@@ -7,7 +7,7 @@ import Telegram from "../assets/telegram.svg";
 const Footer = () => {
   return (
     <footer className="mt-[70px]">
-      <div className="underline border-b-4 border-corange">s</div>
+      <div className="underline border-b-4 border-corange"></div>
       <div className="container mx-auto flex sm:flex-row flex-col items-start justify-between">
         <img src={Logo} alt="" className="mt-[20px] sm:mx-0 mx-auto" />
         {/* Footer Content */}
@@ -35,7 +35,9 @@ const Footer = () => {
           <div className="contact">
             <h3 className="text-corange text-[20px] font-bold">Контакты</h3>
             <ul className="text-corange flex flex-col mt-[30px] gap-[20px]">
-              <Link to="/">HireHub Inc.</Link>
+              <Link to="/" className="font-bold">
+                HireHub Inc.
+              </Link>
               <Link to="/">Адрес проспект елорда чототам </Link>
               <Link to="/">+7-(777)-777-77-77</Link>
               <Link to="/">hirehub@hirehub.com</Link>
@@ -43,9 +45,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="underline border-b-4 border-corange">s</div>
+      <div className="underline border-b-4 border-corange"></div>
       <div className="container mx-auto mb-[25px] pt-[10px] flex justify-between ">
-        <div className="copyright text-corange text-[20px]">
+        <div className="copyright text-corange text-[15px] md:text-[20px]">
           © 2024 ТОО «HireHub»
         </div>
         <div className="social-icons flex gap-4">
