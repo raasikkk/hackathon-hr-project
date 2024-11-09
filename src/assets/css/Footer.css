@@ -1,0 +1,8 @@
+footer p, h2, ul, li {
+    color: #FF8C42;
+}
+
+.footer-content, .footer-bottom {
+    border-top: 2px solid #FF8C42;
+    width: 100%;
+}
