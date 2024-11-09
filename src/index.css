@@ -8,3 +8,16 @@
   font-family: "Montserrat", serif;
   color: white;
 }
+
+.btn {
+  @apply bg-white rounded-[11px] p-[10px] pb-[40px] text-corange h-[40px];
+}
+
+.burger {
+  /* display: none; */
+}
+
+input::placeholder {
+  color: #ff8a4294;
+  font-weight: 600;
+}
