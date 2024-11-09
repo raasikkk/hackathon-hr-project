@@ -21,3 +21,18 @@ input::placeholder {
   color: #ff8a4294;
   font-weight: 600;
 }
+
+.orange-input::placeholder {
+  color: white;
+}
+
+.center-horizontal {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+}
+
+.between-card {
+  @apply rounded-[11px] text-center pt-[25px] bg-corange w-[300px] h-[150px];
+}

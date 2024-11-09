@@ -32,7 +32,7 @@ const Hero = () => {
         {/* Inputs */}
         <div className="hero-form mt-[30px] flex flex-wrap gap-[25px] items-center">
           <input
-            className="w-[450px] h-[65px] bg-no-repeat rounded-[11px] p-5 pl-14 text-corange"
+            className="w-[450px] h-[65px] border-none bg-no-repeat rounded-[11px] p-5 pl-14 text-corange"
             type="text"
             placeholder="Навыки, профессия, местоположение"
             value={input}
