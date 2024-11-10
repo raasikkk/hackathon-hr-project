@@ -23,6 +23,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="logged-in" element={<SearchResume />} />
         {/* <Route path="/search-resume" element={} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

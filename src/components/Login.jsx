@@ -20,7 +20,7 @@ function Login() {
           password,
         }
       );
-      <Navigate to="/search-resume" />;
+      <Navigate to="/logged-in" />;
       console.log(res);
     } catch (error) {
       console.error(error);
