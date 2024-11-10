@@ -58,12 +58,18 @@ const Navbar = () => {
             <i className="fas fa-times"></i>
           </button>
           <ul className="flex flex-col items-center justify-center h-full space-y-11 text-3xl font-semibold">
-            <Link to="/">Поиск Резюме</Link>
-            <Link to="/">Вакансии</Link>
-            <Link to="/">Документация</Link>
+            <Link to="/">Главная</Link>
+            <Link to="/search-resume">Поиск Резюме</Link>
+            <Link to="https://github.com/raasikkk/hackathon-hr-project">
+              Документация
+            </Link>
             <div className="buttons flex flex-col align-center justify-center space-y-6 text-2xl">
-              <button className="btn">Зарегистрироваться</button>
-              <button className="btn">Войти</button>
+              <Link to="/register" className="btn">
+                Зарегистрироваться
+              </Link>
+              <Link to="/login" className="btn">
+                Войти
+              </Link>
             </div>
           </ul>
         </div>
