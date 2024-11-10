@@ -33,8 +33,8 @@ const AuthProvider = ({ children }) => {
         repPassword,
       });
       console.log(response);
-      // setUser(response.data.user);
-      // return response.data;
+      setUser(response.data.user);
+      return response.data;
     } catch (error) {
       console.error("Error registering user", error);
       throw error;
