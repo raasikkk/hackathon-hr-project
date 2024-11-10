@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 // Global Axios configuration
 axios.defaults.withCredentials = true;
@@ -19,7 +20,7 @@ function App() {
           path="/search-resume"
           element={
             <ProtectedRoute>
-              <SearchResume />
+              <Navigate to="/logged-in" />
             </ProtectedRoute>
           }
         />
