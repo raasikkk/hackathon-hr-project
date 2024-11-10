@@ -1,16 +1,23 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../AuthContext";
+import axios from "axios";
 
 function Login() {
   const { login } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await login(username, password);
-      alert("Logged in successfully!");
+      const res = await axios.post(
+        "https://fh-backend-ashy.vercel.app/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+      console.log(res);
     } catch (error) {
       alert("Login failed");
       console.error("Error login user:", error.response || error);
@@ -21,9 +28,9 @@ function Login() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"
