@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 function Login() {
   const { login } = useContext(AuthContext);
-  const [email, setEmail] = useState("");
+  const [value, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
@@ -15,7 +15,7 @@ function Login() {
       const res = await axios.post(
         "https://fh-backend-ashy.vercel.app/api/auth/login",
         {
-          email,
+          value,
           password,
         }
       );
@@ -40,8 +40,8 @@ function Login() {
         </h2>
         <input
           type="text"
-          placeholder="Email"
-          value={email}
+          placeholder="Value"
+          value={value}
           onChange={(e) => setEmail(e.target.value)}
           className="placeholder border-2 border-corange text-corange rounded-[11px] p-5 sm:w-[350px] md:w-[700px] px-5"
         />
