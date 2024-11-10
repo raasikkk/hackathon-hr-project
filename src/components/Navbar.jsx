@@ -15,9 +15,11 @@ const Navbar = () => {
         {/* Large Navbar */}
         <div className="burger hidden lg:flex lg:justify-between lg:w-[80%]">
           <ul className=" pt-[25px] xs:none sm:none md:flex md:justify-between gap-11 text-[20px]">
+            <Link to="/">Главная</Link>
             <Link to="/search-resume">Поиск Резюме</Link>
-            <Link to="/">Вакансии</Link>
-            <Link to="/">Документация</Link>
+            <Link to="https://github.com/raasikkk/hackathon-hr-project">
+              Документация
+            </Link>
           </ul>
           <div className="buttons flex items-center gap-5">
             <button className="bg-white rounded-[11px] p-[8px] text-corange h-[40px]">
