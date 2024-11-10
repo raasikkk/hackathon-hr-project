@@ -8,11 +8,12 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  //   Check if user is logged in
   useEffect(() => {
     const checkLoggedIn = async () => {
       try {
-        const response = await axios.get(`${API_URL}isLogged`);
+        const response = await axios.get(`${API_URL}isLogged`, {
+          withCredentials: true,
+        });
         if (response.data.loggedIn) {
           setUser(response.data.user);
         }
@@ -23,13 +24,13 @@ const AuthProvider = ({ children }) => {
     checkLoggedIn();
   }, []);
 
-  //   Register function
   const register = async (username, password) => {
     try {
-      const response = await axios.post(`${API_URL}register`, {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        `${API_URL}register`,
+        { username, password },
+        { withCredentials: true }
+      );
       setUser(response.data.user);
       return response.data;
     } catch (error) {
@@ -38,13 +39,13 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  // Login function
   const login = async (username, password) => {
     try {
-      const response = await axios.post(`${API_URL}login`, {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        `${API_URL}login`,
+        { username, password },
+        { withCredentials: true }
+      );
       setUser(response.data.user);
       return response.data;
     } catch (error) {
@@ -53,10 +54,9 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  // Logout function
   const logout = async () => {
     try {
-      await axios.post(`${API_URL}logoutUser`);
+      await axios.post(`${API_URL}logoutUser`, {}, { withCredentials: true });
       setUser(null);
     } catch (error) {
       console.error("Logout failed", error);
