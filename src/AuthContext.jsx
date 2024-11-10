@@ -11,9 +11,12 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkLoggedIn = async () => {
       try {
-        const response = await axios.get(`${API_URL}isLogged`, {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          `https://fh-backend-ashy.vercel.app/api/auth/isLogged`,
+          {
+            withCredentials: true,
+          }
+        );
         if (response.data.loggedIn) {
           setUser(response.data.user);
         }
