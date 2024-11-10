@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -19,6 +20,7 @@ function Login() {
           password,
         }
       );
+      <Navigate to="/search-resume" />;
       console.log(res);
     } catch (error) {
       console.error(error);
