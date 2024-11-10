@@ -13,6 +13,7 @@ function Login() {
       alert("Logged in successfully!");
     } catch (error) {
       alert("Login failed");
+      console.error("Error login user:", error.response || error);
     }
   };
 

@@ -19,6 +19,7 @@ function Register() {
       alert("Registered successfully!");
     } catch (error) {
       alert("Registration failed");
+      console.error("Error registering user:", error.response || error);
     }
   };
 
