@@ -17,8 +17,9 @@ const AuthProvider = ({ children }) => {
             withCredentials: true,
           }
         );
-        if (response.data.loggedIn) {
+        if (response.data.isLogged) {
           setUser(response.data.user);
+          console.log(response.data);
         }
       } catch (error) {
         console.error("Error checking logged status", error);
