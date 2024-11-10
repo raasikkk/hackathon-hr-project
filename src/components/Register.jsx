@@ -27,11 +27,14 @@ function Register() {
 
     const API = "https://fh-backend-ashy.vercel.app/api/auth";
     try {
-      const res = await axios.post("https://fh-backend-ashy.vercel.app/api/auth/register", {
-        email,
-        password,
-        repPassword,
-      });
+      const res = await axios.post(
+        "https://fh-backend-ashy.vercel.app/api/auth/register",
+        {
+          email,
+          password,
+          repPassword,
+        }
+      );
       console.log(res);
     } catch (err) {
       console.error(err);
