@@ -4,6 +4,10 @@ import SearchResume from "./pages/SearchResume";
 import NotFound from "./pages/NotFound";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import axios from "axios";
+
+// Global Axios configuration
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
