@@ -24,13 +24,13 @@ const AuthProvider = ({ children }) => {
     checkLoggedIn();
   }, []);
 
-  const register = async (username, password) => {
+  // AuthContext.jsx (register function)
+  const register = async (email, password) => {
     try {
-      const response = await axios.post(
-        `${API_URL}register`,
-        { username, password },
-        { withCredentials: true }
-      );
+      const response = await axios.post(`${API_URL}register`, {
+        email,
+        password,
+      });
       setUser(response.data.user);
       return response.data;
     } catch (error) {

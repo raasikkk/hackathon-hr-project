@@ -3,23 +3,23 @@ import { AuthContext } from "../AuthContext";
 
 function Register() {
   const { register } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [repPassword, setRepPassword] = useState(""); // repPassword for confirming password
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
+    if (password !== repPassword) {
       alert("Passwords do not match");
       return;
     }
 
     try {
-      await register(username, password);
+      await register(email, password); // Send email and password for registration
       alert("Registered successfully!");
     } catch (error) {
       alert("Registration failed");
-      console.error("Error registering user:", error.response || error);
+      console.error(error);
     }
   };
 
@@ -27,24 +27,24 @@ function Register() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Username"
-        value={username}
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         className="placeholder-corange"
-        onChange={(e) => setUsername(e.target.value)}
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
-        className="placeholder-corange"
         onChange={(e) => setPassword(e.target.value)}
+        className="placeholder-corange"
       />
       <input
         type="password"
         placeholder="Confirm Password"
-        value={confirmPassword}
+        value={repPassword}
+        onChange={(e) => setRepPassword(e.target.value)}
         className="placeholder-corange"
-        onChange={(e) => setConfirmPassword(e.target.value)}
       />
       <button type="submit">Register</button>
     </form>
