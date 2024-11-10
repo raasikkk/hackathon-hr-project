@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 const SearchResume = () => {
   const [formData, setFormData] = useState({
     mainWords: "",
@@ -263,12 +264,13 @@ const SearchResume = () => {
             />
           </label>
 
-          <button
+          <Link
+            to="/result"
             type="submit"
-            className="w-[200px] h-[60px] bg-corange rounded-[11px] text-white font-bold mx-auto mt-[50px]"
+            className="w-[200px] h-[60px] text-center pt-4 bg-corange rounded-[11px] text-white font-bold mx-auto mt-[50px]"
           >
             Search
-          </button>
+          </Link>
         </form>
       </div>
       <Footer />
