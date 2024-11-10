@@ -49,6 +49,6 @@ label {
   @apply text-corange text-[20px] font-bold;
 }
 
-placeholder-corange::placeholder {
+.placeholder::placeholder {
   color: #ffa500; /* Example color, you can change it */
 }

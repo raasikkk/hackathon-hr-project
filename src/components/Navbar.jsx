@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../assets/logo.png";
+import Register from "./Register";
+import Login from "./Login";
 
 const Navbar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -22,12 +24,18 @@ const Navbar = () => {
             </Link>
           </ul>
           <div className="buttons flex items-center gap-5">
-            <button className="bg-white rounded-[11px] p-[8px] text-corange h-[40px]">
+            <Link
+              to="/register"
+              className="bg-white rounded-[11px] p-[8px] text-corange h-[40px]"
+            >
               Зарегистрироваться
-            </button>
-            <button className="bg-white rounded-[11px] p-[8px] text-corange h-[40px]">
+            </Link>
+            <Link
+              to="/login"
+              className="bg-white rounded-[11px] p-[8px] text-corange h-[40px]"
+            >
               Войти
-            </button>
+            </Link>
           </div>
         </div>
         {/* Medium Burger Toggle */}
