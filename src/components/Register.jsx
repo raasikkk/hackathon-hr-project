@@ -15,7 +15,7 @@ function Register() {
     }
 
     try {
-      await register(email, password); // Send email and password for registration
+      await register(email, password, repPassword); // Send email and password for registration
       alert("Registered successfully!");
     } catch (error) {
       alert("Registration failed");

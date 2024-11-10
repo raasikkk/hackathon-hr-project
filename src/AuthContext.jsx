@@ -25,11 +25,12 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   // AuthContext.jsx (register function)
-  const register = async (email, password) => {
+  const register = async (email, password, repPassword) => {
     try {
       const response = await axios.post(`${API_URL}register`, {
         email,
         password,
+        repPassword,
       });
       setUser(response.data.user);
       return response.data;
