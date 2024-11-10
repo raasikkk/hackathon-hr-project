@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
           }
         );
         if (response.data.isLogged) {
-          setUser(response.data.user);
+          setUser(response.data.isLogged);
           console.log(response.data.isLogged);
         }
       } catch (error) {
