@@ -29,18 +29,21 @@ function Register() {
         type="text"
         placeholder="Username"
         value={username}
+        className="placeholder-corange"
         onChange={(e) => setUsername(e.target.value)}
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
+        className="placeholder-corange"
         onChange={(e) => setPassword(e.target.value)}
       />
       <input
         type="password"
         placeholder="Confirm Password"
         value={confirmPassword}
+        className="placeholder-corange"
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
       <button type="submit">Register</button>
