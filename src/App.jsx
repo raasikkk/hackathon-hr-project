@@ -19,9 +19,9 @@ function App() {
         <Route
           path="/search-resume"
           element={
-            <ProtectedRoute>
-              <Navigate to="/logged-in" />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            <SearchResume />
+            // </ProtectedRoute>
           }
         />
         <Route path="/logged-in" element={<SearchResume />} />

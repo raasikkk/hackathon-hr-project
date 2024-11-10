@@ -1,12 +1,12 @@
-import { useState, useContext } from "react";
-import { AuthContext } from "../AuthContext";
+import { useState } from "react";
+// import { AuthContext } from "../AuthContext";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function Login() {
-  const { login } = useContext(AuthContext);
+  //   const { login } = useContext(AuthContext);
   const [value, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

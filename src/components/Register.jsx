@@ -1,11 +1,11 @@
-import { useState, useContext } from "react";
-import { AuthContext } from "../AuthContext";
+import { useState } from "react";
+// import { AuthContext } from "../AuthContext";
 import axios from "axios";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function Register() {
-  const { register } = useContext(AuthContext);
+  //   const { register } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repPassword, setRepPassword] = useState(""); // repPassword for confirming password
@@ -28,7 +28,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const API = "https://fh-backend-ashy.vercel.app/api/auth";
+    // const API = "https://fh-backend-ashy.vercel.app/api/auth";
     try {
       const res = await axios.post(
         "https://fh-backend-ashy.vercel.app/api/auth/register",
