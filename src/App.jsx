@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import SearchResume from "./pages/SearchResume";
+import Result from "./pages/Result";
 import NotFound from "./pages/NotFound";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -25,6 +26,7 @@ function App() {
           }
         />
         <Route path="/logged-in" element={<SearchResume />} />
+        <Route path="/result" element={<Result />} />
         {/* <Route path="/search-resume" element={} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

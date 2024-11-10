@@ -38,7 +38,7 @@ input::placeholder {
 }
 
 legend {
-  @apply text-corange;
+  @apply text-corange text-[20px] font-bold;
 }
 
 .search-input {

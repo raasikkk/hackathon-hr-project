@@ -28,51 +28,8 @@ const AuthProvider = ({ children }) => {
     checkLoggedIn();
   }, []);
 
-  // AuthContext.jsx (register function)
-  const register = async (email, password, repPassword) => {
-    try {
-      const response = await axios.post(`${API_URL}register`, {
-        email,
-        password,
-        repPassword,
-      });
-      console.log(response);
-      setUser(response.data.user);
-      return response.data;
-    } catch (error) {
-      console.error("Error registering user", error);
-      throw error;
-    }
-  };
-
-  const login = async (username, password) => {
-    try {
-      const response = await axios.post(
-        `${API_URL}login`,
-        { username, password },
-        { withCredentials: true }
-      );
-      setUser(response.data.user);
-      return response.data;
-    } catch (error) {
-      console.error("Login failed", error);
-      throw error;
-    }
-  };
-
-  const logout = async () => {
-    try {
-      await axios.post(`${API_URL}logoutUser`, {}, { withCredentials: true });
-      setUser(null);
-    } catch (error) {
-      console.error("Logout failed", error);
-    }
-  };
-
   return (
-    <AuthContext.Provider value={{ user, login, register, logout }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
   );
 };
 
