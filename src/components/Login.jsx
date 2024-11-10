@@ -22,6 +22,7 @@ function Login() {
       console.log(res);
     } catch (error) {
       console.error(error);
+      alert("Неправильный логин или пароль");
     }
   };
 
