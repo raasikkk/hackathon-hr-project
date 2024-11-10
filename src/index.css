@@ -36,3 +36,15 @@ input::placeholder {
 .between-card {
   @apply rounded-[11px] text-center pt-[25px] bg-corange w-[300px] h-[150px];
 }
+
+legend {
+  @apply text-corange;
+}
+
+.search-input {
+  @apply rounded-[11px] text-corange border-2 border-corange w-[600px] h-[50px];
+}
+
+label {
+  @apply text-corange text-[20px] font-bold;
+}
